@@ -1,0 +1,3 @@
+.images img:not(.active){
+  display: none;
+}

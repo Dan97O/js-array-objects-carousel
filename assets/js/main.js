@@ -53,16 +53,17 @@ const images = [
 //Come nel primo carosello realizzato, focalizziamoci prima sulla creazione del markup statico: costruiamo il container e inseriamo l'immagine grande in modo da poter stilare lo slider.
 
 const imagesElement = document.querySelector('.slider > .images');
+let activeImage = 0
 
-const photo = images.forEach((img) => {
+const photo = images.forEach((img, i) => {
 console.log(`${img.image}`);
-const imgElement = `<img class="img-fluid"  src="./assets/${img.image}" alt="">`
+const imgElement = `<img class="img-fluid ${i === activeImage ? 'active' : ''}"  src="./assets/${img.image}" alt="">`
 //console.log(imgElement);
 imagesElement.insertAdjacentHTML("beforeend", imgElement)
 })
 
 
-
+const nextEl = document.querySelector('.next')
 
 
 
