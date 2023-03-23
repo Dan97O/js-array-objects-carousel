@@ -1,3 +1,7 @@
 .images img:not(.active){
   display: none;
 }
+
+.images .card-body:not(.active){
+  display: none;
+}
